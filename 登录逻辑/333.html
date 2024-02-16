@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登录页面</title>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('1.jpg');
+    background-size: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* 容器宽度调整为80% */
+    max-width: 960px; /* 最大宽度限制 */
+}
+
+.login-container, .announcement-container {
+    width: 45%; /* 调整为容器宽度的45% */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.register-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.register-link a {
+    color: #82b1ff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%; /* 在较小屏幕上占据更多空间 */
+    }
+    .login-container, .announcement-container {
+        width: 100%; /* 在小屏幕上占据整个容器宽度 */
+        margin-bottom: 20px; /* 添加底部间距 */
+    }
+}
+</style>
+</head>
+<body>
+<div class="background-image"></div>
+<div class="overlay"></div>
+<div class="container">
+    <div class="announcement-container">
+        <h3>更新</h3>
+        <p>一个不怎么好看的注册网站</p>
+    </div>
+    <div class="login-container">
+        <form action="444.php" method="post">
+            <h2>欢迎注册</h2>
+            <div class="input-group">
+                <input type="text" placeholder="账号" name="username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="密码" name="password" required>
+            </div>
+            <button type="submit">注册</button>
+        </form>
+        <div class="register-link">
+            <a href="index.html">登录</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
